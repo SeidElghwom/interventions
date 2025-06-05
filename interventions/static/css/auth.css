@@ -1,0 +1,64 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #c4e1c5, #a4d3a2); /* Dégradé basé sur la couleur dominante */
+  margin: 0;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #5c8a5c; /* Teinte de vert adaptée */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8dbf8e; /* Teinte de vert pour les bordures */
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background: linear-gradient(135deg, #5c8a5c, #78b678); /* Dégradé adapté à la couleur dominante */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4d7a4d, #6aa66a);
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+}

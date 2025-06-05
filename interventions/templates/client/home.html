@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil Client</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>Bienvenue, <span id="clientName"></span></h2>
+        <a href="/stats/" onclick="window.location.href='/stats/'">Statistiques</a>
+        <a href="/auth/logout/">Déconnexion</a>
+    </div>
+
+    <div class="container">
+        <h3>Vos Informations</h3>
+        <div class="client-info">
+            <p><strong>Nom:</strong> <span id="nom"></span></p>
+            <p><strong>Prénom:</strong> <span id="prenom"></span></p>
+            <p><strong>Numéro:</strong> <span id="phonenumber"></span></p>
+            <p><strong>Direction:</strong> <span id="direction"></span></p>
+        </div>
+
+        <h3>Vos Interventions</h3>
+        <div id="interventions" class="section">
+            <table id="interventionsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Motif</th>
+                        <th>État</th>
+                        <th>Intervenant</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>                
+                <tbody></tbody>
+            </table>
+            
+            <h3>Ajouter une Intervention</h3>
+            <form id="interventionForm">
+                <select id="interventionType" required>
+                    <option value="">Sélectionnez un type</option>
+                    <option value="Soft">Soft</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <input type="text" id="interventionMotif" placeholder="Motif" required>
+
+                <select id="interventionEtat" required>
+                    <option value="En attente">En attente</option>
+                    <option value="Réalisée">Réalisée</option>
+                </select>
+
+                <select id="interventionIntervenant" required>
+                    <option value="">Sélectionnez un intervenant</option>
+                </select>
+
+                <button type="submit">Ajouter</button>
+            </form>
+
+        </div>
+        
+    </div>
+
+    <script src="/static/js/home.js"></script>
+</body>
+</html>

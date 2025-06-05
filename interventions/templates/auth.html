@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentification</title>
+    <link rel="stylesheet" href="/static/css/auth.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <!-- Formulaire de connexion -->
+      <div id="loginContainer">
+        <h2>Connexion</h2>
+        <form id="loginForm">
+          <label for="loginPhone">Numéro de téléphone :</label>
+          <input type="text" id="loginPhone" name="phonenumber" required />
+
+          <label for="loginPassword">Mot de passe :</label>
+          <input type="password" id="loginPassword" name="password" required />
+
+          <button type="submit">Se connecter</button>
+          <p id="loginError" class="error-message"></p>
+        </form>
+        <p>Pas encore de compte ? <button id="showSignup">S'inscrire</button></p>
+      </div>
+
+      <!-- Formulaire d'inscription (caché par défaut) -->
+      <div id="signupContainer" style="display: none">
+        <h2>Créer un compte</h2>
+        <form id="signupForm">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" required />
+
+          <label for="prenom">Prénom :</label>
+          <input type="text" id="prenom" name="prenom" required />
+
+          <label for="signupPhone">Numéro de téléphone :</label>
+          <input type="text" id="signupPhone" name="phonenumber" required />
+
+          <label for="direction">Direction :</label>
+          <input type="text" id="direction" name="direction" required />
+
+          <label for="signupPassword">Mot de passe :</label>
+          <input type="password" id="signupPassword" name="password" required />
+
+          <button type="submit">S'inscrire</button>
+          <p id="signupError" class="error-message"></p>
+        </form>
+        <p>Déjà un compte ? <button id="showLogin">Se connecter</button></p>
+      </div>
+    </div>
+
+    <script src="/static/js/auth.js"></script>
+  </body>
+</html>
